@@ -1,24 +1,12 @@
-# todos-vue2
+<h1>Creation of a Todo list with VueJS 2.</h1>
 
-## Project setup
-```
-npm install
-```
+<h3>Goals</h3>
+<p>Allow users to add, edit and remove tasks on a task list.</p>
+<h3>Tech used</h3>
+<p><strong>Front : 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+  ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<h3>Why I made this project</h3>
+<p>I wanted to use VueJS to create a project and thus, understand the basics of this framework.</p>
+<p><strong>Technologies learned :</strong> VueJS.</p>
