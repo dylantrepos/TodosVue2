@@ -9,4 +9,3 @@
 
 <h3>Why I made this project</h3>
 <p>I wanted to use VueJS to create a project and thus, understand the basics of this framework.</p>
-<p><strong>Technologies learned :</strong> VueJS.</p>
