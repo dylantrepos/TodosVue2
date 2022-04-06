@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p>Relation Parent/child test : {{ todos }}</p>
+
     <TodosApp v-model="todos" @input="updateTodos"></TodosApp>
     <button @click="addTodo">Ajouter une tache</button>
   </div>
