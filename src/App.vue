@@ -2,10 +2,12 @@
   <div id="app">
     <CarouselComponent>
       <CarouselSlide>
-        Salut les gens
+       <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: #FFF; font-size: 16px"> Salut les gens</div>
+        <img src="https://picsum.photos/630/300" width="100%"> 
       </CarouselSlide>
       <CarouselSlide>
-        Aurevoir les gens
+       <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: #FFF; font-size: 16px"> Aurevoir les gens</div>
+        <img src="https://picsum.photos/630/300"  width="100%">
       </CarouselSlide>
     </CarouselComponent>
     <TodosApp v-model="todos" @input="updateTodos"></TodosApp>
@@ -46,3 +48,7 @@ export default {
   }
 }
 </script>
+
+<style src="./components/todos.css">
+
+</style>

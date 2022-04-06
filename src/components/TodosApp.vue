@@ -132,6 +132,3 @@ export default {
 }
 </script>
 
-<style src="../../node_modules/todomvc-app-css/index.css">
-
-</style>
