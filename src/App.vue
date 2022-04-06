@@ -8,12 +8,18 @@
     </CarouselComponent>
     <button @click="addSlide">Ajouter un slide</button>
     <button @click="removeSlide">Supprimer une slide</button>
+
+    <p>Relation Parent/child test : {{ todos }}</p>
+    <TodosApp v-model="todos" @input="updateTodos"></TodosApp>
+    <button @click="addTodo">Ajouter une tache</button>
   </div>
 </template>
 
 <script>
 import CarouselComponent from './components/carousel/CarouselComponent.vue';
 import CarouselSlide from './components/carousel/CarouselSlide.vue';
+import TodosApp from './components/TodosApp.vue'
+
 
 export default { 
   name: 'App',
@@ -29,8 +35,18 @@ export default {
   components: {
     CarouselComponent,
     CarouselSlide,
+    TodosApp
   },
   methods: {
+    addTodo() {
+      this.todos.push({
+        name: 'Jeanjean',
+        completed: false
+      })
+    },
+    updateTodos(newTodos) {
+      this.todos = newTodos;
+    },
     addSlide() {
       this.slides++
     },
