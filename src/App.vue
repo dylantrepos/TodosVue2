@@ -1,15 +1,14 @@
 <template>
   <div id="app">
     <CarouselComponent>
-      <CarouselSlide>
-       <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: #FFF; font-size: 16px"> Salut les gens</div>
-        <img src="https://picsum.photos/630/300" width="100%"> 
-      </CarouselSlide>
-      <CarouselSlide>
-       <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: #FFF; font-size: 16px"> Aurevoir les gens</div>
-        <img src="https://picsum.photos/630/300"  width="100%">
+      <CarouselSlide v-for="n in slides" :key="n" :index="n - 1">
+       <div style="position: absolute; left: 0; right: 0; text-align: center; top: 50%; color: #FFF; font-size: 16px"> Slide numéro {{ n }}</div>
+        <img :src="'https://picsum.photos/630/300?random=' + n" width="100%"> 
       </CarouselSlide>
     </CarouselComponent>
+    <button @click="addSlide">Ajouter un slide</button>
+    <button @click="removeSlide">Supprimer une slide</button>
+    
     <TodosApp v-model="todos" @input="updateTodos"></TodosApp>
     <button @click="addTodo">Ajouter une tache</button>
   </div>
@@ -20,10 +19,11 @@ import TodosApp from './components/TodosApp.vue'
 import CarouselComponent from './components/carousel/CarouselComponent.vue'
 import CarouselSlide from './components/carousel/CarouselSlide.vue'
 
-export default {
+export default { 
   name: 'App',
   data() {
     return {
+      slides: 5,
       todos: [{
         name: 'Test de todo',
         completed: false
@@ -44,6 +44,12 @@ export default {
     },
     updateTodos(newTodos) {
       this.todos = newTodos;
+    },
+    addSlide() {
+      this.slides++
+    },
+    removeSlide() {
+      if(this.slides > 1) this.slides--;
     }
   }
 }
