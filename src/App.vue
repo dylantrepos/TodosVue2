@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <carousel-component>
-      <carousel-slide>
+    <CarouselComponent>
+      <CarouselSlide>
         Salut les gens
-      </carousel-slide>
-      <carousel-slide>
+      </CarouselSlide>
+      <CarouselSlide>
         Aurevoir les gens
-      </carousel-slide>
-    </carousel-component>
+      </CarouselSlide>
+    </CarouselComponent>
     <TodosApp v-model="todos" @input="updateTodos"></TodosApp>
     <button @click="addTodo">Ajouter une tache</button>
   </div>
@@ -29,9 +29,9 @@ export default {
     }
   },
   components: {
-    TodosApp,
     CarouselComponent,
-    CarouselSlide
+    CarouselSlide,
+    TodosApp,
   },
   methods: {
     addTodo() {
