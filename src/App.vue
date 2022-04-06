@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import CarouselComponent from './components/carousel/CarouselComponent.vue'
-import CarouselSlide from './components/carousel/CarouselSlide.vue'
+import CarouselComponent from './components/carousel/CarouselComponent.vue';
+import CarouselSlide from './components/carousel/CarouselSlide.vue';
 
 export default { 
   name: 'App',
